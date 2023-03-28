@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: Amster, Yeseva One, 'Times New Roman', Times, serif;
+  color: #e4bd75;
+  background-color: #1c0606;
+}
+
+body {
+  min-width: 360px;
+  max-width: auto;
+  max-height: auto;
+  display: block;
+  text-align: center;
+}
+
+section h1,
+h2 {
+  padding-bottom: 20px;
+  font-size: 2em;
+}
+
+header,
+footer {
+  width: 100%;
+  background-color: #0F070C;
+  position: relative;
+  z-index: 1;
+}
+
+nav {
+  padding: 20px;
+  background-color: #0F070C;
+  opacity: 70%;
+  z-index: 1;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 40px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #FFFFCE;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1em;
+  margin: 20px;
+  padding: 0px;
+}
+
+nav a:hover {
+  color: #ad6029;
+}
+
+footer {
+  opacity: 70%;
+  height: 70px;
+  padding-top: 20px;
+}
+
+.stripe1 {
+  transform: translate(-50%, -50%);
+  height: 500px;
+  max-width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.stripe2 {
+  transform: translateX(50%);
+  height: 500px;
+  max-width: 100%;
+  position: relative;
+  z-index: -1;
+}
+
+.mainLogo {
+  height: 300px;
+  max-width: 100%;
+  transform: translate(-136%, -20%);
+}
+
+
+
+
+@media screen and (max-width: 836px) {
+  nav ul {
+    grid-template-columns: 1fr;
+    width: 200px;
+    position: absolute;
+  }
+
+  nav li {
+    display: inline-block;
+  }
+
+  main {
+    margin-left: 200px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    font-size: 14px;
+  }
+}
