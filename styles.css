@@ -16,6 +16,8 @@ body {
   max-height: auto;
   display: block;
   text-align: center;
+  animation-name: fade;
+  animation-duration: 4s;
 }
 
 section h1,
@@ -61,8 +63,8 @@ nav a:hover {
 
 footer {
   opacity: 70%;
-  height: 70px;
-  padding-top: 20px;
+  height: 40px;
+  padding-top: 10px;
 }
 
 .stripe1 {
@@ -71,24 +73,103 @@ footer {
   max-width: 100%;
   position: relative;
   z-index: -1;
+  opacity: 100%;
+  animation-name: fade;
+  animation-duration: 4s;
 }
 
 .stripe2 {
-  transform: translateX(50%);
-  height: 500px;
+  transform: translateY(-40%);
+  height: 600px;
   max-width: 100%;
-  position: relative;
+  position: fixed;
   z-index: -1;
+}
+
+@keyframes fade {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
 }
 
 .mainLogo {
   height: 300px;
   max-width: 100%;
-  transform: translate(-136%, -20%);
+  transform: translate(-135%, -20%);
+  opacity: 100%;
+  animation-name: fade;
+  animation-duration: 4s;
 }
 
+.home-logo {
+  transform: translateY(20%);
+  height: 30px;
+  max-width: 100%;
+}
 
+.triangle {
+  transform: translate(-50%, -30%);
+  position: absolute;
+  z-index: -1;
+  height: 500px;
+  max-width: 100%;
+}
 
+.aboutme {
+  z-index: 1;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  padding-top: 30px;
+}
+
+.aboutme p {
+  grid-column-start: 1;
+}
+.self-portrait {
+  display: grid;
+  grid-column-start: 1;
+  height: 500px;
+  max-width: 100%;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.portfolio article {
+  padding-top: 50px;
+  grid-column-start: 1;
+}
+
+.contact {
+  padding-top: 50px;
+}
+
+.contact li {
+  list-style-type: none;
+}
+
+.contact p {
+  padding: 20px;
+}
+
+.contact ul {
+  padding: 10px;
+}
+
+.envelope {
+  height: 30px;
+  max-width: 100%;
+}
+
+.phone {
+  height: 50px;
+  max-width: 100%;
+}
+
+/*media screen directions*/
 
 @media screen and (max-width: 836px) {
   nav ul {
