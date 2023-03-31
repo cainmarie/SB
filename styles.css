@@ -17,13 +17,17 @@ body {
   display: block;
   text-align: center;
   animation-name: fade;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 
-section h1,
-h2 {
-  padding-bottom: 20px;
-  font-size: 2em;
+.home h1 {
+  transform: translateY(-50%);
+  font-size: 3em;
+}
+
+.home h2 {
+  transform: translateY(-50%);
+  font-size: 3em;
 }
 
 header,
@@ -87,14 +91,19 @@ footer {
 }
 
 @keyframes fade {
-  from {opacity: 0%;}
-  to {opacity: 100%;}
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
 }
 
 .mainLogo {
   height: 300px;
   max-width: 100%;
-  transform: translate(-135%, -20%);
+  transform: translate(-135%, -30%);
   opacity: 100%;
   animation-name: fade;
   animation-duration: 4s;
@@ -123,9 +132,22 @@ footer {
   padding-top: 30px;
 }
 
-.aboutme p {
-  grid-column-start: 1;
+.aboutme h2 {
+  transform: translateY(-175%);
+  grid-column-start: 2;
+  grid-row-start: 2;
 }
+
+.aboutme p {
+  text-indent: 10%;
+  text-align: justify;
+  padding: 30px;
+  transform: translateY(-125%);
+  grid-column-start: 2;
+  grid-row-start: 2;
+  background-color: #0F070C;
+}
+
 .self-portrait {
   display: grid;
   grid-column-start: 1;
@@ -139,12 +161,14 @@ footer {
 }
 
 .portfolio article {
+  color: #60CF92;
   padding-top: 50px;
   grid-column-start: 1;
 }
 
 .contact {
   padding-top: 50px;
+  color: #28A8AD;
 }
 
 .contact li {
