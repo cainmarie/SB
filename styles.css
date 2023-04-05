@@ -130,10 +130,16 @@ footer {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   padding-top: 30px;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.aboutme-title {
+  font-size: 2em;
 }
 
 .aboutme h2 {
-  transform: translateY(-175%);
+  transform: translateY(-80%);
   grid-column-start: 2;
   grid-row-start: 2;
 }
@@ -142,10 +148,13 @@ footer {
   text-indent: 10%;
   text-align: justify;
   padding: 30px;
-  transform: translateY(-125%);
+  transform: translateY(-50%);
   grid-column-start: 2;
   grid-row-start: 2;
   background-color: #0F070C;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: relative;
 }
 
 .self-portrait {
@@ -153,6 +162,7 @@ footer {
   grid-column-start: 1;
   height: 500px;
   max-width: 100%;
+  transform: translateY(50%);
 }
 
 .portfolio {
@@ -195,26 +205,86 @@ footer {
 
 /*media screen directions*/
 
-@media screen and (max-width: 836px) {
-  nav ul {
+@media screen and (max-width: 1490px) {
+
+  .aboutme h2 {
+    transform: translateY(-70%);
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  
+  .aboutme p {
+    text-indent: 10%;
+    text-align: justify;
+    padding: 30px;
+    transform: translateY(-50%);
+    grid-column-start: 2;
+    grid-row-start: 2;
+    background-color: #0F070C;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: relative;
+  }
+  
+  .self-portrait {
+    display: relative;
+    grid-column-start: 1;
+    height: 500px;
+    min-width: 650px;
+    max-width: 100%;
+  }
+ 
+}
+
+@media screen and (max-width: 1110px) {
+  body {
+    max-width: 1110px;
+  }
+  .home-logo {
+    transform: translateX(40%);
+    height: 30px;
+    max-width: 100%;
+  }
+
+  .aboutme {
+    display: grid;
     grid-template-columns: 1fr;
-    width: 200px;
-    position: absolute;
+    grid-template-rows: 1fr 1fr 1fr;
   }
-
-  nav li {
-    display: inline-block;
+ 
+  .aboutme h2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
   }
+  
+  .aboutme p {
+    text-indent: 10%;
+    text-align: justify;
+    padding: 30px;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    background-color: #0F070C;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .self-portrait {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 500px;
+    max-width: 100%;
 
-  main {
-    margin-left: 200px;
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-widht: 1080px) {
+  .self-portrait {
+    transform: translateX(90%);
+  }
+}
+
+@media screen and (max-width: 800px) {
   body {
-    width: 100%;
-    font-size: 14px;
+    max-width: 800px;
   }
 }
