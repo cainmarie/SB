@@ -8,7 +8,6 @@ html {
   font-family: Amster, Yeseva One, 'Times New Roman', Times, serif;
   color: #e4bd75;
   background-color: #1c0606;
-  min-width: 360px;
 }
 
 body {
@@ -44,6 +43,10 @@ nav {
   background-color: #0F070C;
   opacity: 70%;
   z-index: 1;
+}
+
+#menu-toggle {
+  display: none;
 }
 
 nav li {
@@ -116,6 +119,14 @@ footer {
   max-width: 100%;
 }
 
+.home-logo2 {
+  display: inline-block;
+  margin-right: 40px;
+  height: 30px;
+  max-width: 100%;
+  display: none;
+}
+
 .triangle {
   transform: translate(-50%, -30%);
   position: absolute;
@@ -169,6 +180,7 @@ footer {
 .portfolio {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding: 100px;
 }
 
 .portfolio article {
@@ -178,7 +190,7 @@ footer {
 }
 
 .contact {
-  padding-top: 50px;
+  padding-top: 150px;
   color: #28A8AD;
 }
 
@@ -213,7 +225,7 @@ footer {
     grid-column-start: 2;
     grid-row-start: 2;
   }
-  
+
   .aboutme p {
     text-indent: 10%;
     text-align: justify;
@@ -226,23 +238,48 @@ footer {
     margin-right: 20px;
     display: relative;
   }
-  
+
   .self-portrait {
     display: relative;
     grid-column-start: 1;
-    height: 500px;
-    min-width: 650px;
     max-width: 100%;
   }
- 
+
 }
 
 @media screen and (max-width: 1110px) {
   body {
     max-width: 1110px;
   }
+
+  .mainLogo {
+    display: block;
+    transform: translate(125%, -50%);
+  }
+
+  .stripe1 {
+    transform: translate(-50%, -50%);
+    height: 400px;
+    max-width: 100%;
+    position: relative;
+    z-index: -1;
+    opacity: 100%;
+    animation-name: fade;
+    animation-duration: 4s;
+  }
+  
+  .stripe2 {
+    transform: translate(100%, 0%);
+    height: 350px;
+    max-width: 100%;
+    position: relative;
+    z-index: -1;
+    opacity: 100%;
+    animation-name: fade;
+    animation-duration: 4s;
+  }
+
   .home-logo {
-    transform: translateX(40%);
     height: 30px;
     max-width: 100%;
   }
@@ -252,12 +289,12 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
   }
- 
+
   .aboutme h2 {
     grid-column-start: 1;
     grid-row-start: 2;
   }
-  
+
   .aboutme p {
     text-indent: 10%;
     text-align: justify;
@@ -269,7 +306,7 @@ footer {
     margin-right: 20px;
     max-width: 500px;
   }
-  
+
   .self-portrait {
     grid-column-start: 1;
     grid-row-start: 1;
@@ -283,28 +320,140 @@ footer {
   body {
     max-width: 800px;
   }
+
+  .mainLogo {
+    transform: translate(75%, -60%);
+  }
+
+  .home-logo2 {
+    display: inline;
+    margin-left: 60px;
+  }
+
+  ul {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    list-style-type: none;
+  }
+
+  label {
+    cursor: pointer;
+    display: vertical;
+    padding: 0px 0px;
+    position: relative;
+    user-select: none;
+  }
+
+  label span {
+    background-color: #e4bd75;
+    height: 2px;
+    position: relative;
+    float: right;
+    transition: background-color .2s ease-out;
+    width: 18px;
+    padding: -1.5px;
+  }
+
+  label span:before,
+  label span:after {
+    background: #e4bd75;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+    padding: 0.5px;
+  }
+
+  label span:before {
+    top: 7px;
+  }
+
+  label span:after {
+    top: -7px;
+  }
+
+  input {
+    display: none;
+  }
+
+  input:checked~ul {
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+
+  input:checked~label span {
+    background: transparent;
+  }
+
+  input:checked~label span:before {
+    transform: rotate(-45deg);
+  }
+
+  input:checked~label span:after {
+    transform: rotate(45deg);
+  }
+
+  input:checked~label:not(.steps) span:before,
+  input:checked~label:not(.steps) span:after {
+    top: 0;
+  }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
 }
 
 @media screen and (max-width: 590px) {
 
+  * {
+    max-width: 500px;
+  }
 
   .triangle {
     transform: translate(-50%, -30%);
     position: absolute;
     z-index: -1;
-    height: 500px;
-    max-width: 80%;
+    height: 400px;
+    max-width: 100%;
   }
 
   .aboutme {
-    transform: translateX(-20%);
+    max-width: 500px;
+  }
+
+  .aboutme p {
     max-width: 360px;
   }
 
+  .self-portrait {
+    transform: translate(-1%, 90%);
+    height: 300px;
+  }
 
+  .portfolio {
+   
+    max-width: 100%;
+  }
 }
+
 @media screen and (max-width: 360px) {
-  body {
+  html {
     max-width: 360px;
+  }
+
+  .home h2{
+    padding: 20px;
+  }
+
+  .self-portrait {
+    height: 300px;
+    max-width: 50%;
   }
 }
