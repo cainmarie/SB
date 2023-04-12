@@ -73,8 +73,7 @@ nav a:hover {
 }
 
 nav a:focus {
-  color:orangered;
-  text-decoration: underline;
+  color:#AFE5F9;
 }
 
 footer {
@@ -235,6 +234,11 @@ footer p {
   color: #28A8AD;
 }
 
+.contact h2 {
+  background-color: #0F070C;
+  padding-top: 20px;
+}
+
 .contact-icons {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -273,6 +277,8 @@ footer p {
 
 .contact ul {
   padding-top: 20px;
+  padding-bottom: 40px;
+  background-color: #0F070C;
 
 }
 
