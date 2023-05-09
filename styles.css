@@ -73,7 +73,7 @@ nav a:hover {
 }
 
 nav a:focus {
-  color:#AFE5F9;
+  color: #AFE5F9;
 }
 
 footer {
@@ -229,6 +229,11 @@ footer p {
   text-align: justify;
 }
 
+.resume a img {
+  width: 50%;
+  margin-top: 100px;
+}
+
 .contact {
   padding-top: 150px;
   color: #28A8AD;
@@ -250,9 +255,29 @@ footer p {
   margin-left: auto;
 }
 
+.socials {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 40px;
+}
+
+.socials img {
+  max-width: 3%;
+  margin-right: 30px;
+  padding-top: 30px;
+}
+
+.socials li {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
 .contact a {
   text-decoration: none;
-  color:#28A8AD;
+  color: #28A8AD;
 }
 
 .contact a:hover {
@@ -260,13 +285,13 @@ footer p {
 }
 
 .contact a:focus {
-  color:aliceblue;
+  color: aliceblue;
   text-decoration: underline;
 }
 
 .contact li {
   list-style-type: none;
-  background-color:#0F070C;
+  background-color: #0F070C;
 }
 
 .contact p {
@@ -314,14 +339,18 @@ footer p {
     display: grid;
   }
 
- .self-portrait {
-  display: relative;
-  align-content: center;
-  padding-bottom: 40px;
-  margin-left: auto;
-  margin-right: auto;
-  
- }
+  .self-portrait {
+    display: relative;
+    align-content: center;
+    padding-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+  .socials img {
+    max-width: 5%;
+  }
 
 }
 
@@ -527,7 +556,7 @@ footer p {
 
   .aboutme p {
     max-width: 500px;
-    
+
   }
 
   .self-portrait {
