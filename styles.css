@@ -213,7 +213,7 @@ body h1 {
 .project h2 {
   color: #60CF92;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   grid-column-start: 2;
   grid-column-end: 3;
 }
@@ -226,13 +226,14 @@ body h1 {
 .project p {
   display: flex;
   align-items: flex-start;
-  color: #60CF92;
+  color: #368963;
   grid-column-start: 2;
   grid-column-end: 3;
   padding: 50px;
   margin: 50px;
   text-align: justify;
   background-color: #0F070C;
+  height: 30vh;
 }
 
 .resume a img {
@@ -356,6 +357,10 @@ body h1 {
 
   .socials img {
     max-width: 5%;
+  }
+
+  .project p {
+   height: 40vh;
   }
 
 }
@@ -587,6 +592,10 @@ body h1 {
 
   .project img {
     width: 500px;
+  }
+
+  .project p {
+    height: 50vh;
   }
 
   .container {
