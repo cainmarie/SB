@@ -14,7 +14,6 @@ body {
   min-width: 360px;
   max-width: auto;
   max-height: auto;
-  display: block;
   text-align: center;
   animation-name: fade;
   animation-duration: 2s;
@@ -23,9 +22,8 @@ body {
 
 .home h1 {
   transform: translateY(-50%);
-  font-size: 3em;
-  color:#ad6029;
-  font-size: 50pt;
+  color: #ad6029;
+  font-size: 4.5em;
 }
 
 .home h2 {
@@ -148,6 +146,10 @@ footer p {
   max-width: 100%;
 }
 
+body h1 {
+  font-size: 4em;
+}
+
 .aboutme {
   z-index: 1;
   position: relative;
@@ -161,11 +163,11 @@ footer p {
 }
 
 .aboutme-title {
-  font-size: 2em;
+  font-size: 4em;
 }
 
 .aboutme h2 {
-  transform: translateY(-70%);
+  transform: translateY(-100%);
   grid-column-start: 2;
   grid-row-start: 2;
 }
@@ -174,7 +176,7 @@ footer p {
   text-indent: 10%;
   text-align: justify;
   padding: 30px;
-  transform: translateY(-50%);
+  transform: translateY(-70%);
   grid-column-start: 2;
   grid-row-start: 2;
   background-color: #0F070C;
@@ -197,43 +199,40 @@ footer p {
 }
 
 .portfolio {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
   padding-top: 100px;
 }
 
 .project {
   display: grid;
-  grid-gap: 0px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
 }
 
 .project h2 {
   color: #60CF92;
-  padding-top: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   grid-column-start: 2;
-  grid-column-end: 2;
+  grid-column-end: 3;
 }
 
-.project iframe {
+.project .container {
   grid-column-start: 1;
-  margin-left: auto;
+  grid-column-end: 2;
 }
 
 .project p {
+  display: flex;
+  align-items: flex-start;
   color: #60CF92;
   grid-column-start: 2;
-  grid-column-end: 2;
+  grid-column-end: 3;
   padding: 50px;
   margin: 50px;
   text-align: justify;
   background-color: #0F070C;
-}
-
-.shorten-box {
-  margin-bottom: 100px;
 }
 
 .resume a img {
@@ -605,7 +604,8 @@ footer p {
   }
 
   .home h1 {
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .home h2 {
@@ -628,6 +628,10 @@ footer p {
   }
 
   .project img {
+    width: 300px;
+  }
+
+  .project p {
     width: 300px;
   }
 }
