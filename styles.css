@@ -24,6 +24,8 @@ body {
   transform: translateY(-50%);
   color: #ad6029;
   font-size: 4.5em;
+  animation-name: fade;
+  animation-duration: 3s;
 }
 
 .home h2 {
