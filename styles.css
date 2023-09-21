@@ -212,6 +212,11 @@ body h1 {
   margin-bottom: 100px;
 }
 
+.project img {
+  max-width: 100%;
+  margin-left:2em;
+}
+
 .project h2 {
   color: #60CF92;
   margin-top: 50px;
